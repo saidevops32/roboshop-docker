@@ -1,6 +1,5 @@
-#
-# Build
-#
+#Build
+
 FROM maven AS build
 
 WORKDIR /opt/shipping
@@ -13,7 +12,7 @@ RUN mvn package
 #
 # Run
 #
-FROM openjdk:8-jdk
+FROM openjdk:8-jre-alpine3.9
 
 EXPOSE 8080
 
